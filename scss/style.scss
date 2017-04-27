@@ -1,0 +1,123 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+*, *:before{
+	box-sizing: border-box;
+}
+.circle{
+	border-radius: 50%;
+	background: black;
+}
+.iphone{
+	background: #383732;
+	display: flex;
+	flex-direction: column;
+	width: 220px;
+	height: 449px;
+	border-radius: 28px;
+	position: relative;
+	margin: 5em auto;
+  	perspective: 1000;
+}
+.screen{
+	width: 200px;
+	height: 342px;
+	background: #B8959B;
+	align-self: center;
+	padding: 1em;
+	outline: 2px solid darken(#B8959B, 5% );
+    outline-offset: -2px;
+    position: relative;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+}
+.btn{
+	background: lighten( black, 20% );
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 90%;
+	align-self: center;
+	border-radius: 50%;
+	border: 2px solid lighten( black, 5% );
+	color: white;
+}
+.btn:hover{
+	background: black;
+	cursor: pointer;
+	transition: all .5;
+}
+.row{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1em;
+	&:first-child{
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	}
+	span{
+		display: inline-block;
+	}
+}
+.tiny {
+	width: 4.5px;
+	height: 4.5px;
+}
+.large{
+	width: 6.63px;
+	height: 6.63px;
+	margin-right: .2em;
+}
+.rectangle{
+	width: 27px;
+	height: 3.4px;
+	border-radius: 3.4px;
+	background: black;
+}
+.front, .back{
+	backface-visibility: hidden;
+	width: 100%;
+	height: 100%;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.back{
+	transform: rotateY(180deg);
+	background: #FFF0D6;
+	color: black;
+}
+
+#checkbox:checked + .flip{
+	transform: rotateY(180deg);
+}
+.control{
+	display: block;
+	position: absolute;
+	width: 6px;
+	border-radius: 2px;
+	background:  #383732;
+}
+.left{
+	height: 28px;
+	left: -3px;	
+	top: 100px;
+}
+.left.below{
+	top: 132px;
+}
+.small{
+	top: 65px;
+	height: 18px;
+}
+.right{
+	height: 48px;
+	right: -3px;
+	top: 70px;
+}
+
